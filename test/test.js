@@ -29,6 +29,28 @@ describe('Task #1 - Metadata', function() {
 });
 
 describe('Task #2 - Regular Expression', function() {
+  var allPass = true;
+  for(var key in metadata){
+    //check if key exist in value
+    if(metadata.hasOwnProperty(key)){
+      //check if key is found in the value
+      //also check if the key is set at the first character in the value
+      var metaRegEx = new RegExp(key, 'g');
+      var metaValue = metadata[key].search(metaRegEx);
+      var stringRegex = "^("+key+")\\s(\\w+)$";
+      var fullRegex = new RegExp(stringRegex);
+      if(fullRegex.test(metadata[key])){
+        allPass = true;
+      }
+      else{
+        console.log("Task #2 (Regular Expression) - "+key+" has an invalid format input.");
+        allPass = false;
+      }
+    }
+  }
+  if(allPass == true){
+    console.log("Task #2 (Regular Expression) - All form are in correct format.");
+  }
   describe('#match', function() {
 
     var result = ['card expire date day', 'card expire date month', 'card expire date year']
