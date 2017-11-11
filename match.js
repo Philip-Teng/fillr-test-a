@@ -4,9 +4,6 @@ module.exports.match = function(hash) {
 	var creditCardExpiredDay, creditCardExpiredMonth, creditCardExpiredYear, results;
 
 	results = [];
-	creditCardExpiredDay = hash["card expire date day"];
-	creditCardExpiredMonth = hash["card expire date month"];
-	creditCardExpiredYear = hash["card expire date year"];
 
 	//compare metadata hash with Regular Expression and append it into the results array
 	//then return the results value so that it matches the assertion.
