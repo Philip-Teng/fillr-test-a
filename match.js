@@ -1,7 +1,7 @@
 module.exports.match = function(hash) {
 
   	// Write your solution to Task #2 - Match Metadata task here
-	var creditCardExpiredDay, creditCardExpiredMonth, creditCardExpiredYear, results;
+  	var results;
 
 	results = [];
 
